@@ -33,7 +33,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
       {/* DOBRA 1 & 2 - HERO */}
-      <section className="pt-20 pb-16 px-4 text-center bg-white relative overflow-hidden">
+      <section className="pt-20 pb-16 px-6 md:px-8 text-center bg-white relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full overflow-hidden -z-10 pointer-events-none">
           <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-50 blur-3xl opacity-60"></div>
@@ -62,24 +62,35 @@ export default function App() {
             Descubra o que os bancos enxergam no seu CNPJ antes de te dar qualquer resposta: seu rating real, o que está travando seu crédito e quais linhas de crédito sua empresa pode acessar agora.
           </p>
           
-          {/* Video Placeholder */}
-          <div className="relative w-full max-w-3xl mx-auto aspect-video bg-gray-100 rounded-2xl border border-gray-200 shadow-xl flex items-center justify-center mb-10 overflow-hidden group cursor-pointer">
-            <img src="https://picsum.photos/seed/business/1280/720?blur=2" alt="Video thumbnail" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" referrerPolicy="no-referrer" />
-            <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            <div className="relative z-10 bg-white/90 p-4 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <PlayCircle className="w-12 h-12 text-blue-600" fill="currentColor" />
+          {/* Video */}
+          <div className="relative w-full max-w-sm mx-auto bg-gray-100 rounded-2xl border border-gray-200 shadow-xl mb-10 overflow-hidden">
+            <div style={{ position: 'relative', paddingTop: '177.77777777777777%' }}>
+              <iframe 
+                id="panda-c93faaeb-67c8-46cd-b5e4-45d97faab59b" 
+                src="https://player-vz-a428cc0b-6bf.tv.pandavideo.com.br/embed/?v=c93faaeb-67c8-46cd-b5e4-45d97faab59b" 
+                style={{ border: 'none', position: 'absolute', top: 0, left: 0 }} 
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
+                allowFullScreen={true} 
+                width="100%" 
+                height="100%" 
+                fetchPriority="high"
+              ></iframe>
+            </div>
+            {/* Fictitious Progress Bar */}
+            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gray-200/80 z-10">
+              <div className="h-full bg-blue-600 w-1/3 rounded-r-full shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
             </div>
           </div>
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.7)] transition-all flex items-center justify-center mx-auto gap-2 w-full sm:w-auto hover:-translate-y-1">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 sm:py-4 sm:px-8 rounded-full text-[13px] sm:text-base md:text-lg whitespace-nowrap shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.7)] transition-all flex items-center justify-center mx-auto gap-2 w-full sm:w-auto hover:-translate-y-1">
             QUERO MEU DIAGNÓSTICO E REUNIÃO
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
       </section>
 
       {/* PAIN POINTS */}
-      <section className="py-24 px-4 bg-slate-50 border-y border-slate-100">
+      <section className="py-24 px-6 md:px-8 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">Isso já aconteceu com você?</h2>
@@ -90,7 +101,7 @@ export default function App() {
             {[
               "Foi ao banco com nome limpo e mesmo assim levou \"não\"",
               "O gerente não soube explicar o motivo da negativa",
-              "Tentou em 2, 3 bancos diferentes — sempre o mesmo resultado",
+              "Tentou em 2, 3 bancos diferentes, sempre o mesmo resultado",
               "Tem faturamento, tem CNPJ ativo, mas limite nunca vem",
               "Está pagando juros de 4%, 5% ao mês sem saber que existem linhas a 0,8%"
             ].map((text, i) => (
@@ -105,14 +116,14 @@ export default function App() {
             <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
             <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
             <p className="text-xl md:text-2xl text-white font-medium leading-relaxed relative z-10">
-              Se isso acontece com você, o problema não está no seu CPF. Está em informações que aparecem nos sistemas internos dos bancos — e que você nunca teve acesso.
+              Se isso acontece com você, o problema não está no seu CPF. Está em informações que aparecem nos sistemas internos dos bancos e que você nunca teve acesso.
             </p>
           </div>
         </div>
       </section>
 
       {/* DOBRA 3 - O PRODUTO */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -120,12 +131,11 @@ export default function App() {
                 Não é um PDF que você vai tentar entender sozinho.
               </h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Você recebe o relatório completo com os dados reais do seu CNPJ e CPF — e senta em uma reunião com um gerente de crédito do time do Allan Vinícius, que abre esse relatório com você e explica ponto a ponto o que está acontecendo.
+                Você recebe o relatório completo com os dados reais do seu CNPJ e CPF e senta em uma reunião com um gerente de crédito do time do Allan Vinícius, que abre esse relatório com você e explica ponto a ponto o que está acontecendo.
               </p>
               
               <div className="space-y-8">
                 <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                  <span className="w-8 h-px bg-blue-600"></span>
                   O que a reunião cobre:
                 </h3>
                 
@@ -171,9 +181,9 @@ export default function App() {
               <div className="absolute inset-0 bg-blue-600 rounded-[2.5rem] transform rotate-3 opacity-5"></div>
               <div className="absolute inset-0 bg-blue-600 rounded-[2.5rem] transform -rotate-2 opacity-5"></div>
               <img 
-                src="https://picsum.photos/seed/report2/800/1000" 
+                src="https://comunidadeazul360.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.07.36.jpeg" 
                 alt="Relatório de Crédito" 
-                className="relative rounded-[2rem] shadow-2xl border border-gray-100 object-cover w-full h-[600px]" 
+                className="relative rounded-[2rem] shadow-2xl border border-gray-100 object-contain w-full h-auto max-h-[600px] bg-white" 
                 referrerPolicy="no-referrer" 
               />
               
@@ -193,13 +203,13 @@ export default function App() {
       </section>
 
       {/* DOBRA 4 - OFERTA + GARANTIA */}
-      <section className="py-24 px-4 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-24 px-6 md:px-8 bg-slate-900 text-white relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#4f46e5 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Diagnóstico Completo + Reunião com Gerente de Crédito</h2>
-          <p className="text-xl text-slate-300 mb-16 max-w-2xl mx-auto">Esse tipo de análise em qualquer consultoria custa entre R$ 500 e R$ 1.000 — sem a reunião inclusa.</p>
+          <p className="text-xl text-slate-300 mb-16 max-w-2xl mx-auto">Esse tipo de análise em qualquer consultoria custa entre R$ 500 e R$ 1.000 sem a reunião inclusa.</p>
           
           <div className="bg-white text-gray-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl max-w-2xl mx-auto relative transform hover:scale-[1.02] transition-transform duration-300">
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-2.5 rounded-full font-bold text-sm tracking-widest uppercase shadow-lg">
@@ -234,8 +244,8 @@ export default function App() {
               ))}
             </div>
             
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-8 rounded-2xl text-xl shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-3 mb-6 group">
-              <Search className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 sm:py-5 sm:px-8 rounded-2xl text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 sm:gap-3 mb-6 group">
+              <Search className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
               GARANTIR MINHA VAGA AGORA
             </button>
             
@@ -255,7 +265,7 @@ export default function App() {
       </section>
 
       {/* DOBRA 5 - AUTORIDADE + RODAPÉ */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-6 md:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
@@ -267,7 +277,7 @@ export default function App() {
                 Allan Vinícius é correspondente bancário há mais de 4 anos, CEO da Azul 360 e ex-empresário do varejo que descobriu de dentro como os bancos realmente tomam decisões de crédito.
               </p>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                Hoje seu time usa esse conhecimento para mostrar aos empresários o que o sistema bancário enxerga sobre eles — e como virar esse jogo.
+                Hoje seu time usa esse conhecimento para mostrar aos empresários o que o sistema bancário enxerga sobre eles e como virar esse jogo.
               </p>
               
               <div className="grid grid-cols-3 gap-6 border-t border-gray-100 pt-10">
@@ -288,9 +298,9 @@ export default function App() {
             <div className="order-1 md:order-2 flex justify-center relative">
               <div className="absolute inset-0 bg-blue-100 rounded-full transform translate-x-4 translate-y-4 -z-10"></div>
               <img 
-                src="https://picsum.photos/seed/ceo/600/600" 
+                src="https://comunidadeazul360.com/wp-content/uploads/2026/03/allan-1.png" 
                 alt="Allan Vinícius" 
-                className="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover shadow-2xl border-8 border-white" 
+                className="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover shadow-2xl border-8 border-white bg-blue-50" 
                 referrerPolicy="no-referrer" 
               />
             </div>
@@ -299,11 +309,11 @@ export default function App() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-16 bg-blue-600 text-center px-4">
+      <section className="py-16 bg-blue-600 text-center px-6 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <button className="bg-white text-blue-900 hover:bg-gray-50 font-bold py-5 px-10 rounded-full text-xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-center mx-auto gap-3 mb-8 w-full sm:w-auto hover:-translate-y-1">
-            GARANTIR MEU DIAGNÓSTICO — R$ 97
-            <ArrowRight className="w-6 h-6" />
+          <button className="bg-white text-blue-900 hover:bg-gray-50 font-bold py-4 px-2 sm:py-5 sm:px-10 rounded-full text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-xl hover:shadow-2xl transition-all flex items-center justify-center mx-auto gap-2 sm:gap-3 mb-8 w-full sm:w-auto hover:-translate-y-1">
+            GARANTIR MEU DIAGNÓSTICO POR R$ 97
+            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-blue-100 text-sm font-medium">
             <span className="flex items-center gap-2"><Lock className="w-5 h-5 opacity-70" /> Pagamento seguro</span>
@@ -314,8 +324,20 @@ export default function App() {
       </section>
       
       {/* FOOTER */}
-      <footer className="bg-slate-900 py-8 text-center text-slate-500 text-sm px-4">
-        <p>© {new Date().getFullYear()} Azul 360. Todos os direitos reservados.</p>
+      <footer className="bg-slate-900 py-12 text-center text-slate-400 text-sm px-6 md:px-8 border-t border-slate-800">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <p className="text-xs leading-relaxed text-slate-500">
+            Este site não faz parte do site da Meta Platforms, Inc. ou do Facebook Inc. Além disso, este site NÃO é endossado pela Meta de nenhuma maneira. FACEBOOK é uma marca comercial da META PLATFORMS, INC.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
+            <a href="/politica-de-privacidade" className="hover:text-white transition-colors">Política de Privacidade</a>
+            <span className="text-slate-700">|</span>
+            <a href="/termos-de-uso" className="hover:text-white transition-colors">Termos de Uso</a>
+          </div>
+          <p className="text-slate-500 pt-4 border-t border-slate-800">
+            © {new Date().getFullYear()} Azul 360. Todos os direitos reservados.
+          </p>
+        </div>
       </footer>
     </div>
   );
