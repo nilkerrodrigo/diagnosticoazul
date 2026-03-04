@@ -53,8 +53,8 @@ export default function App() {
             Atenção Empresário
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6 leading-tight">
-            Seu crédito não é negado por acaso. Existe <span className="text-blue-600 relative whitespace-nowrap">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+            Existe <span className="text-blue-600 relative whitespace-nowrap">
               R$ 200 mil
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-blue-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
@@ -62,12 +62,8 @@ export default function App() {
             </span> esperando pela sua empresa, e ninguém te contou como acessar.
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Descubra o que os bancos enxergam no seu CNPJ antes de te dar qualquer resposta: seu rating real, o que está travando seu crédito e quais linhas de crédito sua empresa pode acessar agora.
-          </p>
-          
           {/* Video */}
-          <div className="relative w-full max-w-sm mx-auto bg-gray-100 rounded-2xl border border-gray-200 shadow-xl mb-10 overflow-hidden">
+          <div className="relative w-full max-w-sm mx-auto bg-gray-100 rounded-2xl border border-gray-200 shadow-xl mb-8 overflow-hidden">
             <div style={{ position: 'relative', paddingTop: '177.77777777777777%' }}>
               <iframe 
                 id="panda-c93faaeb-67c8-46cd-b5e4-45d97faab59b" 
@@ -85,6 +81,10 @@ export default function App() {
               <div className="h-full bg-blue-600 w-1/3 rounded-r-full shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
             </div>
           </div>
+
+          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Descubra o que os bancos enxergam no seu CNPJ antes de te dar qualquer resposta: seu rating real, o que está travando seu crédito e quais linhas de crédito sua empresa pode acessar agora.
+          </p>
 
           <a href="#oferta" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 sm:py-4 sm:px-8 rounded-full text-[13px] sm:text-base md:text-lg whitespace-nowrap shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.7)] transition-all flex items-center justify-center mx-auto gap-2 w-full sm:w-auto hover:-translate-y-1">
             QUERO MEU DIAGNÓSTICO E REUNIÃO
