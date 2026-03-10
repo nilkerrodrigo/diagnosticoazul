@@ -248,7 +248,7 @@ export default function App() {
               ))}
             </div>
             
-            <a href="https://mon.net.br/3ta6cq" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 sm:py-5 sm:px-8 rounded-2xl text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 sm:gap-3 mb-6 group">
+            <a href="https://app.monetizze.com.br/checkout/DTG369516" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 sm:py-5 sm:px-8 rounded-2xl text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 sm:gap-3 mb-6 group">
               <Search className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
               GARANTIR MINHA VAGA AGORA
             </a>
