@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   PlayCircle, 
   XCircle, 
@@ -33,6 +33,32 @@ function FeatureItem({ icon, title, desc }: { icon: React.ReactNode, title: stri
 export default function App() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
+
+  useEffect(() => {
+    // Send PageView event to our backend (which forwards to Meta CAPI)
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        eventName: 'PageView',
+        eventUrl: window.location.href,
+        userAgent: navigator.userAgent,
+      })
+    }).catch(err => console.error('Failed to track PageView:', err));
+  }, []);
+
+  const handleCheckoutClick = () => {
+    // Send InitiateCheckout event to our backend
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        eventName: 'InitiateCheckout',
+        eventUrl: window.location.href,
+        userAgent: navigator.userAgent,
+      })
+    }).catch(err => console.error('Failed to track InitiateCheckout:', err));
+  };
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
@@ -248,7 +274,11 @@ export default function App() {
               ))}
             </div>
             
-            <a href="https://app.monetizze.com.br/checkout/DTG369516" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 sm:py-5 sm:px-8 rounded-2xl text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 sm:gap-3 mb-6 group">
+            <a 
+              href="https://app.monetizze.com.br/checkout/DTG369516" 
+              onClick={handleCheckoutClick}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-2 sm:py-5 sm:px-8 rounded-2xl text-[13px] sm:text-base md:text-xl whitespace-nowrap shadow-[0_10px_20px_-10px_rgba(37,99,235,0.6)] hover:shadow-[0_20px_25px_-5px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-2 sm:gap-3 mb-6 group"
+            >
               <Search className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
               GARANTIR MINHA VAGA AGORA
             </a>
